@@ -1,33 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed with Bootstrap</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-</head>
-<body>
-    <nav class="navbar bg-body-tertiary">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Tomorrowland</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/26dd937286.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light py-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            Instagram
-          </a>
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <i class="fa-brands fa-square-instagram fa-xl"></i>
+                    <h3 class="d-inline-block fs-5">Instagram</h3>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Crear nuevo post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dr opdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+                            <li><a class="dropdown-item" href="#">Privacidad y Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Cerrar sesion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-    
-      
-      
-      
-      
-      
-      
-      
-      
-  </body>
-</html>
-    </body>
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Crear un nuevo post</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Caption:</h5>
+                    <textarea class="form-control" placeholder="Agrega el caption de tu post aqui"
+                        id="floatingTextarea2"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-dark">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-2">
+        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/62ffe0e6-70f6-4e10-919c-267b9a373e2b/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/5f8de875-6a92-403d-9661-97fd47351d5b/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/4aa6db9f-f103-4611-8534-d513abef713b/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/5200822e-23c0-40ea-91e0-2ae00fb41fbc/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/b30ed4d3-f117-444e-a861-d80e86c2225a/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/ec139e3f-d941-4fa1-9a2a-1d772fc4b5e2/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/6ea0c58c-99b6-4e91-9099-223a830f43c0/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/df99e03f-cf23-4f19-8908-e961b5da1719/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdn.uc.assets.prezly.com/b061ed4f-da1f-4f78-b31c-01a1066f4a1d/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">The 20-year anniversary edition of Tomorrowland Belgium - LIFE</div>
+                            <small class="align-bottom">08/26</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://cdn.uc.assets.prezly.com/df99e03f-cf23-4f19-8908-e961b5da1719/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>204 Likes</strong>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, tempore distinctio esse assumenda accusamus cum sequi quod omnis? Aspernatur voluptates est nesciunt officia eligendi voluptatum maxime accusantium iste eos voluptas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Tomorrowland’s official camping site and the festival's one and only official opening party.</div>
+                            <small>04/09</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://cdn.uc.assets.prezly.com/62ffe0e6-70f6-4e10-919c-267b9a373e2b/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>26985 Likes</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus blanditiis corrupti possimus, unde similique inventore, sint accusantium dolore nesciunt libero aliquam iste id autem dolores, laborum facilis nulla consequuntur exercitationem?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Tomorrowland 2024 - DreamVille & The Gathering</div>
+                            <small>06/10</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://cdn.uc.assets.prezly.com/b30ed4d3-f117-444e-a861-d80e86c2225a/-/preview/1200x1200/-/format/auto/" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>204 Likes</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, deserunt quasi reprehenderit ullam sapiente et at recusandae dignissimos a cum debitis aut corrupti sequi quis voluptate tenetur. Laboriosam, omnis velit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"crossorigin="anonymous"></script>
+</body>
+  
 </html>
